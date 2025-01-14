@@ -14,6 +14,8 @@ connection.authenticate()
     })
     .catch((error) => {
         console.error('Erro ao conectar ao banco de dados:', error);
+        console.log('DATABASE_URL:', process.env.DATABASE_URL);
+        console.log('DATABASE_KEY:', process.env.DATABASE_KEY ? '[PRESENTE]' : '[NÃO DEFINIDO]');
     });
 
 
