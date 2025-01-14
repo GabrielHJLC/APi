@@ -14,8 +14,14 @@ module.exports = {
         createdAt: 'created_at',
         updatedAt: 'updated_at',
     },
+    logging: (msg) => console.log(`[Sequelize Log] ${msg}`),
     dialectOptions: {
         timezone: 'America/Fortaleza',
+        ssl: {
+            require: true,
+            rejectUnauthorized: false,
+        },
+        family: 4,
     },
     timezone: 'America/Fortaleza',
 };
